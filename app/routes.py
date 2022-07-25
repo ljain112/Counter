@@ -39,11 +39,11 @@ def entryform():
 def history():
     person = User.query.get(current_user.id)
     query=person.entrys.all()
-    g = 0
-    for d in query:
-        g += d.quantity 
+    gt = 0
+    for no in query:
+        gt += no.quantity 
       
-    return render_template('history.html',query=query,total=g)
+    return render_template('history.html',query=query,total=gt)
 
 @app.route('/delete/<int:id>')
 def erase(id):
