@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table>
+<thead>
+    <tr>
+    <th>DATE</th>
+    <th>QUANTITY</th>
+    <th>Delete</th>
+        
+    </tr>
+</thead>
+<tbody>
+    {% for data in query %}
+    <tr>  
+    <td>
+    {{data.date.strftime('%d-%m-%Y')}}   
+    </td>
+    <td>
+    {{data.quantity}}
+    </td>
+    <td><a href="/delete/{{data.id}}" type="button">Delete</a></td>
+    </tr>  
+    {% endfor %}
+    <tr>
+    <td>Total</td>
+    <td>{{total}}</td>
+    </tr>
+</tbody>
+</table>
+
+
+{% endblock %}    

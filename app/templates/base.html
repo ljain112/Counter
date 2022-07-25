@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+    <head>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        table, th, td {
+                        border: 1px solid black;
+                        padding: 5px;
+                      }
+
+        table {
+               border-spacing: 15px;
+              }
+
+
+        html {
+              height: 100%;
+              margin: auto
+             }
+
+
+        body {  
+              padding:0;
+              font-family: sans-serif; 
+              }
+
+
+        a { margin: 5px;
+            font-weight:bold
+            }
+
+
+        h1 {
+            color: DodgerBlue
+           }
+
+        #user {
+                color: red;
+                font-size: 12px;
+                margin-left: auto
+              }
+
+    </style>    
+        <title>Daily Counter</title>        
+    </head>
+    <body>
+        <h1>DAILY COUNTER</h1>
+        <div>
+            {% if current_user.is_anonymous %}
+            <a href="/login">LOGIN</a>
+            {% else %}
+            <a href="/entryform">DAILY ENTRY</a>
+            <a href="/history">HISTORY</a> 
+            <a href="/logout">LOGOUT</a>
+            <p id="user">User = {{ current_user.username.title()}}</p>
+            {% endif %}
+        </div>
+        <hr>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul style="color: red; font-style: italic">
+            {% for message in messages %}
+            <li>{{ message.upper() }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        
+        {% block content %} {% endblock %}
+    </body>
+</html>
