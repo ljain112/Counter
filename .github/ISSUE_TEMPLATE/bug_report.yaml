@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Welcome to India Compliance Issue Tracker! Before submitting an issue, please take note of the following.
+        Welcome to India Compliance issue tracker! Prior to submitting a request, kindly consider the following:
 
         1. This tracker should only be used to report bugs and request features / enhancements to India Compliance
             - For questions and general support, checkout the [Documentation](https://).
