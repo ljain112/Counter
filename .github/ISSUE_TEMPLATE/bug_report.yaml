@@ -24,19 +24,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: module
-    attributes:
-      label: Module
-      description: Select affected Module of India Compliance.
-      multiple: true
-      options:
-        - e-Waybill
-        - e-Invoice
-        - Other
-    validations:
-      required: true
-
   - type: textarea
     id: exact-version
     attributes:
@@ -56,7 +43,12 @@ body:
       description: Please copy and paste any relevant log output. This will be automatically formatted.
       render: shell
 
-  - type: markdown
+   - type: checkboxes
+    id: terms
     attributes:
-      value: |
-        By submitting this issue, you agree to follow our [Code of Conduct]()
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com)
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
+          
