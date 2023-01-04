@@ -20,6 +20,7 @@ body:
     attributes:
       label: Information about bug
       description: Also tell us, what did you expect to happen?
+                   If applicable, add screenshots to help explain your problem. 
       placeholder: Please provide as much information as possible.
     validations:
       required: true
@@ -30,9 +31,9 @@ body:
       label: Version
       description: Share exact version number of Frappe and ERPNext and India Compliance you are using.
       placeholder: |
-        Frappe version -
+        Frappe Version -
         ERPNext Verion -
-        India Compliance - 
+        India Compliance Version - 
     validations:
       required: true
 
