@@ -1,38 +1,62 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+name: Bug Report
+description: Report a bug encountered while using India Compliance
+labels: ["bug"]
 
----
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Welcome to India Compliance Issue Tracker! Before submitting an issue, please take note of the following.
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+        1. This tracker should only be used to report bugs and request features / enhancements to India Compliance
+            - For questions and general support, checkout the [Documentation](https://).
+            - For documentation issues, propose edit on [documentation site](https://docs.erpnext.com/) directly.
+        2. When making a bug report, make sure you provide all required information. The easier it is for
+           maintainers to reproduce, the faster it'll be fixed.
+        3. If you think you know what the reason for the bug is, share it with us. Maybe put in a PR 😉
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+  - type: textarea
+    id: bug-info
+    attributes:
+      label: Information about bug
+      description: Also tell us, what did you expect to happen?
+      placeholder: Please provide as much information as possible.
+    validations:
+      required: true
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+  - type: dropdown
+    id: module
+    attributes:
+      label: Module
+      description: Select affected Module of India Compliance.
+      multiple: true
+      options:
+        - e-Waybill
+        - e-Invoice
+        - Other
+    validations:
+      required: true
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+  - type: textarea
+    id: exact-version
+    attributes:
+      label: Version
+      description: Share exact version number of Frappe and ERPNext and India Compliance you are using.
+      placeholder: |
+        Frappe version -
+        ERPNext Verion -
+        India Compliance - 
+    validations:
+      required: true
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output / Stack trace / Full Error Message.
+      description: Please copy and paste any relevant log output. This will be automatically formatted.
+      render: shell
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
+  - type: markdown
+    attributes:
+      value: |
+        By submitting this issue, you agree to follow our [Code of Conduct]()
