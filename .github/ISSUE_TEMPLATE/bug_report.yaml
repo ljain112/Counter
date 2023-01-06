@@ -9,8 +9,8 @@ body:
         Welcome to India Compliance issue tracker! Prior to submitting a request, kindly consider the following:
 
         1. This tracker should only be used to report bugs and request features / enhancements to India Compliance
-            - For questions and general support, checkout the [Documentation](https://example.com).
-            - For documentation issues, propose edit on [documentation site](https://example.com) directly.
+            - For questions and general support, checkout the [documentation](https://docs.erpnext.com/docs/v14/user/manual/en/regional/india).
+            - For documentation issues, propose edit on documentation site directly.
         2. Use the search function before creating a new issue. Duplicates will be closed and directed to
            the original discussion.    
         3. When making a bug report, make sure you provide all required information. The easier it is for
